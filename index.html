@@ -1,0 +1,146 @@
+<html>
+  <head>
+    <title>Nishant's Tetris</title>
+  </head>
+  <body>
+    <h1>Tetris</h1>
+    <div class="flex row">
+      <div id="player-displayDiv">
+        <main id="player-main" class="flex col">
+          <h2 id="player-tag">You</h2>
+          <div class="flex row">
+            <svg id="player-svgCanvas" class="svgCanvas">
+              <!-- game over text box -->
+              <g
+                id="player-gameOver"
+                visibility="hidden"
+                class="popUp" 
+              >
+                <rect
+                  x="26"
+                  y="120"
+                  fill="white"
+                  height="48"
+                  width="149"
+                ></rect>
+                <text x="36" y="150">Game Over</text>
+              </g>
+              <g
+                id="player-matchMaking"
+                visibility="hidden"
+                class="popUp"
+              >
+                <rect
+                  x="26"
+                  y="120"
+                  fill="white"
+                  height="48"
+                  width="149"
+                ></rect>
+                <text x="36" y="150">Match Making</text>
+              </g>
+            </svg>
+            <div id="player-sideBar" class="flex col">
+              <svg id="player-svgPreview" class="svgPreview"></svg>
+              <div id="player-info" class="info flex col">
+                <div class="text">
+                  <span class="left">Level: </span>
+                  <span class="right" id="player-levelText">...</span>
+                </div>
+                <div class="text">
+                  <span class="left">Score: </span>
+                  <span class="right" id="player-scoreText">...</span>
+                </div>
+                <div class="text">
+                  <span class="left">Highscore: </span>
+                  <span class="right" id="player-highScoreText">...</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+      <div id="opponent-displayDiv">
+        <main id="opponent-main" class="flex col">
+          <h2>Opponent</h2>
+          <div class="flex row">
+            <svg id="opponent-svgCanvas" class="svgCanvas">
+              <!-- game over text box -->
+              <g
+                id="opponent-gameOver"
+                visibility="hidden"
+                class="popUp"
+                style="z-index: 2"
+              >
+                <rect
+                  x="26"
+                  y="120"
+                  fill="white"
+                  height="48"
+                  width="149"
+                ></rect>
+                <text x="36" y="150">Game Over</text>
+              </g>
+              <g
+                id="opponent-matchMaking"
+                visibility="hidden"
+                class="popUp"
+                style="z-index: 1"
+              >
+                <rect
+                  x="26"
+                  y="120"
+                  fill="white"
+                  height="48"
+                  width="149"
+                ></rect>
+                <text x="36" y="150">Match Making</text>
+              </g>
+            </svg>
+            <div id="opponent-sideBar" class="flex col">
+              <svg id="opponent-svgPreview" class="svgPreview"></svg>
+              <div id="opponent-info" class="info flex col">
+                <div class="text">
+                  <span class="left">Level: </span>
+                  <span class="right" id="opponent-levelText">...</span>
+                </div>
+                <div class="text">
+                  <span class="left">Score: </span>
+                  <span class="right" id="opponent-scoreText">...</span>
+                </div>
+                <div class="text">
+                  <span class="left">Highscore: </span>
+                  <span class="right" id="opponent-highScoreText">...</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div class="controls flex col">
+          <div class="text">
+            <span class="left">Move: </span>
+            <span class="right">A D</span>
+          </div>
+          <div class="text">
+            <span class="left">Rotate: </span>
+            <span class="right">W</span>
+          </div>
+          <div class="text">
+            <span class="left">Smash: </span>
+            <span class="right">SPACE</span>
+          </div>
+          <div class="text">
+            <span class="left">New Solo Game: </span>
+            <span class="right">1</span>
+          </div>
+          <div class="text">
+            <span class="left">New PvP Game: </span>
+            <span class="right">2</span>
+          </div>
+        </div>
+    </div>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
